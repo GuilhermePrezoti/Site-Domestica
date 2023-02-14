@@ -1,24 +1,25 @@
 <?php
+    namespace Projeto\siteDomestica\PHP;
 
-class Conexao{
-        
-    public function conectar(){
-        try{
-            $conn = mysqli_connect('localhost', 'root' , '' ,'site');
-            if($conn){
-                echo "<br>Conectado com sucesso!";
-                return;
-                
-            }//fim do if
-            echo "<br>Não Entrei!";
+        class Conexao{
+            
+        public function conectar(){
+            try{
+                $conn = mysqli_connect('localhost', 'root' , '' ,'site');
+                if($conn){
+                    echo "<br>Conectado com sucesso!";
+                    return $conn;
+                    
+                }//fim do if
+                echo "<br>Não Entrei!";
 
-        }//fim do try
-        catch(Except $erro)
-        {
-            echo $erro;
-        }//fim do catch
-    }//fim do conectar
+            }//fim do try
+            catch(Except $erro)
+            {
+                echo $erro;
+            }//fim do catch
+        }//fim do conectar
 
-}//fim da classe
+        }//fim da classe
 
 ?>
