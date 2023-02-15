@@ -15,16 +15,15 @@
             string $rua,
             string $cidade,
             int $numero,
+            string $telefone,
             string $dataDeNascimento,
             string $senha,
-            string $email,
-            int $avaliacao, 
-            string $anuncio)
+            string $email)
         {
             try{
                 $conn = $conexao->conectar();//Abrindo a conexão com o banco
-                $sql  = "insert into $nomeDaTabela(cpf, nome, rua, cidade, numero, dataDeNascimento, senha, email, avaliacao, anuncio) 
-                values ('$cpf','$nome','$rua', '$cidade', '$numero', '$dataDeNascimento', '$senha', '$email', '$avaliacao', '$anuncio')";//Escrevi o script
+                $sql  = "insert into $nomeDaTabela(cpf, nome, rua, cidade, numero, telefone, dataDeNascimento, senha, email, avaliacao) 
+                values ('$cpf','$nome','$rua', '$cidade', '$numero', '$telefone ', '$dataDeNascimento', '$senha', '$email', '0')";//Escrevi o script
                 $result = mysqli_query($conn,$sql);//Executa a ação do script no banco
 
                 mysqli_close($conn);//fechando a conexão com sucesso!
