@@ -1,5 +1,5 @@
 <?php
-    namespace Projeto\siteDomestica\PHP;
+    namespace siteDomestica\PHP\Cliente;
 
         class Conexao{
             

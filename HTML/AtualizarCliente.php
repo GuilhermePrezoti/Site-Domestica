@@ -1,15 +1,15 @@
 <?php
-    namespace Projeto\siteDomestica\HTML;
+    namespace siteDomestica\HTML;
 
-    require_once('../PHP/Conexao.php');
-    require_once('../PHP/Atualizar.php');
+    require_once('../PHP/Cliente/Conexao.php');
+    require_once('../PHP/Cliente/Atualizar.php');
 
-    use Projeto\siteDomestica\PHP\Conexao;
-    use Projeto\siteDomestica\PHP\Update;
+    use Projeto\siteDomestica\PHP\Cliente\Conexao;
+    use Projeto\siteDomestica\PHP\Cliente\Update;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,21 +18,32 @@
 </head>
 <body>
     <form method="POST">
+        <label>Informe seu CPF: </label>
+        <input type="number" name="tCpf"><br><br>
+        <label>Informe o Dado que deseja atualizar</label>
+
 
         <select name="tCampo">
             <option value="telefone">Telefone</option>
             <option value="rua">Rua</option>
             <option value="cidade">Cidade</option>
             <option value="numero">Número</option>
-        </select>
-        <input type="text" name="tCampo" placeholder="Exemplo: TELEFONE, ENDEREÇO">
+        </select><br><br>
+
+
+        <label>Novo Dado:</label>
+        <input type="text" name="tNovoDado"/>
+
+        
         <button>Atualizar</button>
 
+
+
         <?php
-            if($_POST['tCampo'] == $_POST['tCampo']){
+            if($_POST['tCampo'] != "" && $_POST['tNovoDado'] != "" && $_POST['tCpf'] != ""){
                 $conexao = new Conexao();
                 $atu     = new Update();
-                echo $atu->atualizarCli($conexao, "cliente", $_POST['tCampo']);
+                echo $atu->atualizarCli($conexao,$_POST['tCampo'], $_POST['tNovoDado'], $_POST['tCpf'], "cliente");
                 return;
             }//fim do if
             echo "Dado NÃO Atualizado!";
