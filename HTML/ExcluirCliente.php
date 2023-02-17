@@ -1,11 +1,11 @@
 <?php
-    namespace Projeto\siteDomestica\HTML;
+    namespace siteDomestica\HTML;
 
-    require_once('../PHP/Conexao.php');
-    require_once('../PHP/Excluir.php');
+    require_once('../PHP/Cliente/Conexao.php');
+    require_once('../PHP/Cliente/Excluir.php');
 
-    use Projeto\siteDomestica\PHP\Conexao;
-    use Projeto\siteDomestica\PHP\Delete;
+    use Projeto\siteDomestica\PHP\Cliente\Conexao;
+    use Projeto\siteDomestica\PHP\Cliente\Delete;
 
 
 ?>
