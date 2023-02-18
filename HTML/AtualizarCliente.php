@@ -4,8 +4,8 @@
     require_once('../PHP/Cliente/Conexao.php');
     require_once('../PHP/Cliente/Atualizar.php');
 
-    use Projeto\siteDomestica\PHP\Cliente\Conexao;
-    use Projeto\siteDomestica\PHP\Cliente\Update;
+    use siteDomestica\PHP\Cliente\Conexao;
+    use siteDomestica\PHP\Cliente\Update;
 ?>
 
 <!DOCTYPE html>
@@ -49,5 +49,9 @@
             echo "Dado NÃO Atualizado!";
         ?>
         </form>
+        <a href="ExcluirAnuncio.php"><button>Excluir Anúncio</button></a>
+        <a href="ConsultarCliente.php"><button>Consultar Perfil</button></a>
+        <a href="ExcluirCliente.php"><button>Excluir Perfil</button></a>
+        <a href="InserirAnuncio.php"><button>Inserir Anúncio</button></a>
 </body>
 </html>

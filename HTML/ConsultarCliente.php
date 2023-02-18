@@ -5,8 +5,8 @@
     require_once('../PHP/Cliente/Conexao.php');
     require_once('../PHP/Cliente/Consultar.php');
 
-    use Projeto\siteDomestica\PHP\Cliente\Conexao;
-    use Projeto\siteDomestica\PHP\Cliente\Consultar;
+    use siteDomestica\PHP\Cliente\Conexao;
+    use siteDomestica\PHP\Cliente\Consultar;
 
 ?>
 
@@ -33,9 +33,10 @@
             return;
         }//fim do if
     ?>
-
-
-
     </form>
+        <a href="ExcluirAnuncio.php"><button>Excluir Anúncio</button></a>
+        <a href="AtualizarCliente.php"><button>Atualizar Perfil</button></a>
+        <a href="ExcluirCliente.php"><button>Excluir Perfil</button></a>
+        <a href="InserirAnuncio.php"><button>Inserir Anúncio</button></a>
 </body>
 </html>

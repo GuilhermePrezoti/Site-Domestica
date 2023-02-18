@@ -1,0 +1,56 @@
+<?php
+    namespace siteDomestica\HTML;
+
+    require_once('../PHP/Cliente/Conexao.php');
+    require_once('../PHP/Cliente/Consultar.php');
+
+    use siteDomestica\PHP\Cliente\Conexao;
+    use siteDomestica\PHP\Cliente\Consultar;
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../css/styleTelaContato.css">
+</head>
+    <body>
+        <header id="nav">   
+            <img id="logo" src="../imagens/iconeSite.png" alt="Icone do Site"> 
+            <nav>
+                <ul class="navLink">
+                    <li><a href="#"><b>Como funciona?</b></a></li>
+                    <li><a href="#"><b>Quem Somos?</b></a></li>
+                    <li><a href="PaginaCadastrar.html"><b>Cadastre-se</b></a></li>
+                    <li><a href="PaginaLogin.html"><b>Login</b></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="blocoContato">
+
+        <h3>Entre em contato</h3>
+        <br><br>        
+
+        <div id="formNome">
+            <input type="text" value="Nome do prestador aqui" disabled>
+        <form action="#" method="POST">
+            <br>
+            <h2>Telefone:<h2>
+            <input type="text" value="telefone do prestador aqui" disabled>
+            <h2>Nota</h2> 
+            
+            <div id="iconAvaliacao">     
+            <input id="iconavaliacao" type="text" value="Avaliacao aqui" disabled>
+            </div>
+            <br><br>            
+            <div class="opcoes">  
+                <button class="botao">Entrar em contato </button>
+                <button class="botao">Voltar</button>
+            </div>
+        </form>
+             </div>
+            </body>
+            </html>

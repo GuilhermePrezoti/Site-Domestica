@@ -4,8 +4,8 @@
     require_once('../PHP/Cliente/Conexao.php');
     require_once('../PHP/Cliente/Inserir.php');
 
-    use Projeto\siteDomestica\PHP\Cliente\Conexao;
-    use Projeto\siteDomestica\PHP\Cliente\Inserir;
+    use siteDomestica\PHP\Cliente\Conexao;
+    use siteDomestica\PHP\Cliente\Inserir;
 ?>
 
 <!DOCTYPE html>

@@ -1,10 +1,11 @@
 <?php
     namespace siteDomestica\HTML;
+
     require_once('../PHP/Cliente/Conexao.php');
     require_once('../PHP/Cliente/Anuncio.php');
 
-    use Projeto\siteDomestica\PHP\Cliente\Conexao;
-    use Projeto\siteDomestica\PHP\Cliente\Anuncios;
+    use siteDomestica\PHP\Cliente\Conexao;
+    use siteDomestica\PHP\Cliente\Anuncios;
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +45,7 @@
         <label>Data da Publicação: </label>
         <input type="date" name="tDataPublicacao"/><br><br>
 
-        <button>Anunciar</button>
+        <button>Anunciar</button><br>
 
         <?php
             if($_POST['tCpf'] != "" && $_POST['tTitulo'] != "" && $_POST['tDescricao'] != "" && $_POST['tValor'] != "" && $_POST['tCidade'] != "" && $_POST['tLogradouro'] != "" && $_POST['tBairro'] != "" && $_POST['tNumero'] != "" && $_POST['tDataPublicacao'] != ""){
@@ -54,7 +55,10 @@
             }//fim do if
 
         ?>
-
     </form>
+        <a href="ExcluirAnuncio.php"><button>Excluir Anúncio</button></a>
+        <a href="AtualizarCliente.php"><button>Atualizar Perfil</button></a>
+        <a href="ConsultarCliente.php"><button>Consultar Perfil</button></a>
+        <a href="ExcluirCliente.php"><button>Excluir Perfil</button></a>
 </body>
 </html>
